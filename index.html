@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+</head>
+<style type="text/css">
+    body{
+        margin: 0 ;
+        padding: 0;
+    }
+    .time{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+        border: 2px dashed silver;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .hour{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 132px;
+        height: 7px;
+        margin-top: -3px;
+        background-color: blue;
+        border-radius: 5px;
+        transform-origin: right;
+        animation: tick 43200s steps(60, end) infinite;
+    }
+    .min{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 6px;
+        height: 157px;
+        margin: -156px 0 0 -4px;
+        background-color: silver;
+        border-radius: 5px;
+        transform-origin: bottom;
+        animation: tick 3600s steps(60, end) infinite;
+    }
+    .miao{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 2px;
+        height: 190px;
+        margin-top: -189px;
+        margin-left: -3px;
+        z-index: 4;
+        background-color: red;
+        border-radius: 5px;
+        transform-origin: bottom;
+        animation: tick 60s steps(60, end) infinite;
+    }
+    .yuan{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -8px 0 0 -9px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: red;
+        z-index: 1;
+    }
+    @keyframes tick {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+<div class="time">
+    <div class="miao"></div>
+    <div class="min"></div>
+    <div class="hour"></div>
+    <div class="yuan"></div>
+</div>
+</body>
+</html>
