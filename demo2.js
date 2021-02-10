@@ -1,14 +1,11 @@
+/*
+可使用 express.Router 类创建模块化、可挂载的路由句柄。Router 实例是一个完整的中间件和路由系统
+*/
 let express = require('express');
-
+let router = require('./router');
 let app = express();
 
-app.get('/example/b',(req,res)=>{
-    let list = {
-        name:'小明',
-        age:18
-    }
-    res.send(list)
-})
+app.use('/api',router);
 
 let server = app.listen(9000,()=>{
     let host = server.address().address;
