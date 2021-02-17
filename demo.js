@@ -3,7 +3,7 @@ let app = express();
 
 app.get('/',(req, res)=>{
     res.send('Hello World!')
-})
+});
 
 /*
    监听从 3000 端口进入的所有连接请求
