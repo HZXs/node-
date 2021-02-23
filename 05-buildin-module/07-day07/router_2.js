@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 //引入路由文件
-let router = require('./router');
+let router = require('./modules/router');
 //创建http服务器
 http.createServer((req,res) => {
  /*
