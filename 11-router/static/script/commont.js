@@ -1,0 +1,1 @@
+console.log('js是最好的语言');
